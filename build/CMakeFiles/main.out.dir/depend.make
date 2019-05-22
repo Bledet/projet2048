@@ -6,8 +6,15 @@ CMakeFiles/main.out.dir/game.cpp.o: ../game.h
 
 CMakeFiles/main.out.dir/main.cpp.o: ../game.h
 CMakeFiles/main.out.dir/main.cpp.o: ../main.cpp
+CMakeFiles/main.out.dir/main.cpp.o: ../mcts.h
 CMakeFiles/main.out.dir/main.cpp.o: ../noeud.h
 
+CMakeFiles/main.out.dir/mcts.cpp.o: ../game.h
+CMakeFiles/main.out.dir/mcts.cpp.o: ../mcts.cpp
+CMakeFiles/main.out.dir/mcts.cpp.o: ../mcts.h
+CMakeFiles/main.out.dir/mcts.cpp.o: ../noeud.h
+
+CMakeFiles/main.out.dir/noeud.cpp.o: ../game.h
 CMakeFiles/main.out.dir/noeud.cpp.o: ../noeud.cpp
 CMakeFiles/main.out.dir/noeud.cpp.o: ../noeud.h
 

@@ -7,7 +7,14 @@ CMakeFiles/main.out.dir/game.cpp.o
 CMakeFiles/main.out.dir/main.cpp.o
  /etudiants/bledet/Documents/2048/game.h
  /etudiants/bledet/Documents/2048/main.cpp
+ /etudiants/bledet/Documents/2048/mcts.h
+ /etudiants/bledet/Documents/2048/noeud.h
+CMakeFiles/main.out.dir/mcts.cpp.o
+ /etudiants/bledet/Documents/2048/game.h
+ /etudiants/bledet/Documents/2048/mcts.cpp
+ /etudiants/bledet/Documents/2048/mcts.h
  /etudiants/bledet/Documents/2048/noeud.h
 CMakeFiles/main.out.dir/noeud.cpp.o
+ /etudiants/bledet/Documents/2048/game.h
  /etudiants/bledet/Documents/2048/noeud.cpp
  /etudiants/bledet/Documents/2048/noeud.h

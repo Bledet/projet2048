@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/etudiants/bledet/Documents/2048/game.cpp" "/etudiants/bledet/Documents/2048/build/CMakeFiles/main.out.dir/game.cpp.o"
   "/etudiants/bledet/Documents/2048/main.cpp" "/etudiants/bledet/Documents/2048/build/CMakeFiles/main.out.dir/main.cpp.o"
+  "/etudiants/bledet/Documents/2048/mcts.cpp" "/etudiants/bledet/Documents/2048/build/CMakeFiles/main.out.dir/mcts.cpp.o"
   "/etudiants/bledet/Documents/2048/noeud.cpp" "/etudiants/bledet/Documents/2048/build/CMakeFiles/main.out.dir/noeud.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

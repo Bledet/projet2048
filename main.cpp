@@ -1,8 +1,13 @@
 #include <iostream>
 #include "game.h"
 #include "noeud.h"
+#include "mcts.h"
 #include <string>
+#include <vector>
 #include <time.h>
+#include <unistd.h>
+#include <sys/time.h>
+
 
 using namespace std;
 
@@ -70,10 +75,14 @@ void play(){
     g.print();
 
     do{
+        g.clearPossibleMoves();
+
         enh = press_touch(g);
         g.print();
         win = g.checkWin();
-        lost = g.isLost();
+        g.searchPossibleMoves();
+
+        lost = g.isLost(g.getPossibleMoves());
 
     }while(win == false || lost == false);
 
@@ -104,6 +113,7 @@ void playArbre(){
     Noeud* courant = &n;
 
     do{
+        g.clearPossibleMoves();
 
         enh = press_touch(g);
         g.print();
@@ -149,7 +159,8 @@ void playArbre(){
         courant = node;
 
         win = g.checkWin();
-        lost = g.isLost();
+        g.searchPossibleMoves();
+        lost = g.isLost(g.getPossibleMoves());
 
         nbCoup++;
         id++;
@@ -167,6 +178,8 @@ void playArbre(){
     }
 
 }
+
+
 
 void testArbre(){
 
@@ -193,9 +206,39 @@ void testArbre(){
 
 }
 
+void playAI(){
+    Game g;
+	int nb;
+
+    cout<<"Nombre de répétition ? ";
+    cin>>nb;
+    g.playAI(nb);
+}
+
+void initSeed(){
+	
+	struct timeval time;
+
+    gettimeofday(&time,NULL);
+
+    srand((time.tv_sec * 1000) + (time.tv_usec / 1000));
+		
+}
+
 int main()
 {
-    playArbre();
+	initSeed();
+	
+   //playAI();
+   
+   
+	
+	Mcts mcts;
+	Noeud n;
+	
+	mcts.playMcts(n);
+
+    //playArbre();
 
 
     return 0;

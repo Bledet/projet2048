@@ -2,6 +2,7 @@
 #define NOEUD_H
 
 #include <vector>
+#include "game.h"
 
 
 #include <string>
@@ -15,24 +16,42 @@ class Noeud
     public:
         Noeud();
         Noeud(Noeud const& n);
-
+        
+        Game g;
+        
+        float scoreNoeud;
+		
+		void incrIter();
+		int getNbIt();
         int getId();
         void setId(int i);
         void addChild(Noeud n);
         void addParent(Noeud *n);
+		void setScore(float s);
+		float getScore();
         Noeud getParent();
         void setDirection(string s);
         int taille();
         int getNbChild();
         string getDirection();
         vector<Noeud> getChildren();
+        void setGame(Game g);
+        
+        Noeud* parent;
+
+        
+
+
+
+
+
 
     protected:
 
     private:
 
+		int nbIteration;
         int id;
-        Noeud* parent;
         string direction;
         vector <Noeud> children;
 

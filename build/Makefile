@@ -177,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mcts.o: mcts.cpp.o
+
+.PHONY : mcts.o
+
+# target to build an object file
+mcts.cpp.o:
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/mcts.cpp.o
+.PHONY : mcts.cpp.o
+
+mcts.i: mcts.cpp.i
+
+.PHONY : mcts.i
+
+# target to preprocess a source file
+mcts.cpp.i:
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/mcts.cpp.i
+.PHONY : mcts.cpp.i
+
+mcts.s: mcts.cpp.s
+
+.PHONY : mcts.s
+
+# target to generate assembly for a file
+mcts.cpp.s:
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/mcts.cpp.s
+.PHONY : mcts.cpp.s
+
 noeud.o: noeud.cpp.o
 
 .PHONY : noeud.o
@@ -219,6 +246,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mcts.o"
+	@echo "... mcts.i"
+	@echo "... mcts.s"
 	@echo "... noeud.o"
 	@echo "... noeud.i"
 	@echo "... noeud.s"
