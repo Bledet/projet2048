@@ -55,6 +55,8 @@ iostream
 -
 sys/time.h
 -
+math.h
+-
 
 /etudiants/bledet/Documents/2048/mcts.h
 noeud.h

@@ -13,6 +13,8 @@ class Mcts{
         Mcts();
 		void playMcts(Noeud &n);
 		void updateScore(Noeud *n);
+		void calculUct(Noeud *n);
+		void addAllChildren(Noeud * n);
 
     protected:
 

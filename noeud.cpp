@@ -21,6 +21,10 @@ float Noeud::getScore(){
 	
 }
 
+float Noeud::getUct(){
+	return scoreUct;
+}
+
 void Noeud::setGame(Game copie){
 	
 	for(int i = 0; i<4; i++){
@@ -37,7 +41,6 @@ void Noeud::setScore(float s){
 }
 
 vector<Noeud> Noeud::getChildren(){
-
     return children;
 }
 
@@ -45,17 +48,16 @@ void Noeud::addChild(Noeud n){
     children.push_back(n);
 }
 
+
 void Noeud::setDirection(string s){
     direction = s;
 }
 
 int Noeud::getNbChild(){
-
     return children.size();
 }
 
 int Noeud::getNbIt(){
-	
 	return nbIteration;
 }
 
@@ -88,7 +90,6 @@ int Noeud::getId(){
 void Noeud::setId(int i){
     id = i;
 }
-
 
 void Noeud::addParent(Noeud *n){
     parent = n;

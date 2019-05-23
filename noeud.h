@@ -20,15 +20,17 @@ class Noeud
         Game g;
         
         float scoreNoeud;
+        float scoreUct;
 		
 		void incrIter();
 		int getNbIt();
         int getId();
         void setId(int i);
-        void addChild(Noeud n);
-        void addParent(Noeud *n);
 		void setScore(float s);
 		float getScore();
+		float getUct();
+        void addChild(Noeud n);
+        void addParent(Noeud *n);
         Noeud getParent();
         void setDirection(string s);
         int taille();
