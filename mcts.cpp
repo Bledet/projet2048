@@ -9,7 +9,7 @@ using namespace std;
 
 Mcts::Mcts()
 {
-	//yes
+	
 }
 
 void Mcts::updateScore(Noeud *n){
@@ -55,7 +55,7 @@ void Mcts::addAllChildren(Noeud *n){
 
 void Mcts::calculUct(Noeud *n){
 	
-		n->scoreUct = (n->scoreNoeud/n->getNbIt()) + sqrt(2) * (log(n->parent->getNbIt())/n->getNbIt());
+	n->scoreUct = (n->scoreNoeud/n->getNbIt()) + sqrt(2) * (log(n->parent->getNbIt())/n->getNbIt());
 		
 }
 
@@ -80,7 +80,7 @@ void Mcts::playMcts(Noeud &n){
 	for(int i=0; i<(int)newGame.getPossibleMoves().size(); i++){
 		
 		/* Creation du noeud */
-		Noeud newNode;
+	Noeud newNode;
         newNode.setDirection(newGame.getPossibleMoves()[i]);
         Noeud* node = new Noeud(newNode);
         node->addParent(courant);
@@ -89,8 +89,7 @@ void Mcts::playMcts(Noeud &n){
         
         /* On joue une fois */
         node->g.press_touch_auto(newGame.getPossibleMoves()[i]);
-        cout<<"-----g!:smlkdjlfkgds---------"<<i<<endl;
-		//node->g.print();
+		
         /* On copie la grille et fini la partie */
         Game copie(node->g);
         node->setScore(node->g.playAI(1));
@@ -101,48 +100,11 @@ void Mcts::playMcts(Noeud &n){
         addAllChildren(node);
         cout<<"nb child : " << node->getNbChild()<<endl;
         
-        
-        
         cout<<"score uct du noeud = "<<node->scoreUct<<endl;
         cout<<"score parent = "<<node->parent->getScore()<<endl;
         cout<<"nbit noeud = "<<node->getNbIt()<<endl;
         cout<<"nbit parent = "<<node->parent->getNbIt()<<endl;
-		node->g.print();
+	node->g.print();
 	}
 }
 
-
-
-/*
-Noeud Mcts::selectNode(){
-
-   
-}
-
-
-
-void Mcts::expansion(Noeud n){}
-
-
-void Mcts::backPropagation(Noeud n){}
-
-
-void Mcts::simulate(Noeud n){}
-
-
-
-
-double Mcts::UCT(Noeud &n){
-
-    double nodeWinScore = n.getNbWin();
-    int nbVisit = n.getNbVisit();
-
-    if(nbVisit == 0){
-        return Integer.MAX_VALUE;
-    }
-
-    return ((double) nodeWinScore / (double) nbVisit) + 1.41 * Math.sqrt(Math.log(totalVisit) / (double) nbVisit);
-
-}
-
-*/
