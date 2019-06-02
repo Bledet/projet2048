@@ -98,7 +98,6 @@ void playArbre(){
     bool lost = false;
     int nbCoup = 0;
     int id = 2;
-    //vector<Noeud>tabNode;
 
     Game g;
     g.init();
@@ -109,7 +108,6 @@ void playArbre(){
 
     Noeud n;
     n.setId(1);
-    //tabNode.push_back(n);
     Noeud* courant = &n;
 
     do{
@@ -125,10 +123,7 @@ void playArbre(){
         node->addParent(courant);
 
 
-        //tabNode.push_back(node);
         courant->addChild(newNode);
-
-        //Noeud* tmp = &node;
 
 
         cout<<"id du parent "<< node->getParent().getId()<<endl;
@@ -139,8 +134,6 @@ void playArbre(){
         cout<<"direction du parent: "<< node->getParent().getDirection()<<endl;
         cout<<"direction du courant: "<< courant->getDirection()<<endl;
         cout<<"direction du noeud actuel: "<< node->getDirection()<<endl;
-
-        //courant->addChild(tabNode[tabNode.size()-1]);
 
         cout<<"nombre d'enfant de la racine : "<<n.getNbChild()<<endl;
         cout<<"nombre d'enfant du parent : "<<courant->getNbChild()<<endl;
@@ -208,7 +201,7 @@ void testArbre(){
 
 void playAI(){
     Game g;
-	int nb;
+    int nb;
 
     cout<<"Nombre de répétition ? ";
     cin>>nb;
@@ -229,7 +222,7 @@ int main()
 {
 	initSeed();
 	
-   //playAI();
+   	//playAI();
    
    
 	
@@ -238,7 +231,7 @@ int main()
 	
 	mcts.playMcts(n);
 
-    //playArbre();
+   	 //playArbre();
 
 
     return 0;
