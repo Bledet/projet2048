@@ -21,14 +21,13 @@ class Noeud
         
         float scoreNoeud;
         float scoreUct;
-		
-		void incrIter();
-		int getNbIt();
+	void incrIter();
+	int getNbIt();
         int getId();
         void setId(int i);
-		void setScore(float s);
-		float getScore();
-		float getUct();
+	void setScore(float s);
+	float getScore();
+	float getUct();
         void addChild(Noeud n);
         void addParent(Noeud *n);
         Noeud getParent();
@@ -41,18 +40,12 @@ class Noeud
         
         Noeud* parent;
 
-        
-
-
-
-
-
 
     protected:
 
     private:
 
-		int nbIteration;
+	int nbIteration;
         int id;
         string direction;
         vector <Noeud> children;
